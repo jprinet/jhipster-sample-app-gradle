@@ -24,7 +24,7 @@ plugins {
 }
     
 gradleEnterprise {
-    server = "https://ge.jhipster.tech"
+    server = "https://ge.solutions-team.gradle.com"
     buildScan {
         captureTaskInputFiles = true
         uploadInBackground = System.getenv("CI") == null // adjust to your CI provider
@@ -37,7 +37,7 @@ buildCache {
     remote(HttpBuildCache) {
         push = true
         enabled = false // Disabled as this might not always desired
-        url = 'https://ge.jhipster.tech/cache/' // note the trailing slash!
+        url = 'https://ge.solutions-team.gradle.com/cache/' // note the trailing slash!
     }
 }
 rootProject.name = "jhipster-gradle-sample-application"
