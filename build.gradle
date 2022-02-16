@@ -166,7 +166,7 @@ liquibase {
 }
 
 gitProperties {
-    failOnNoGitDirectory = false
+    failOnNoGitDirectory = true
     keys = ["git.branch", "git.commit.id.abbrev", "git.commit.id.describe"]
 }
 
