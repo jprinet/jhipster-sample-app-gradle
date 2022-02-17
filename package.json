@@ -44,7 +44,6 @@
     "e2e:protractor": "protractor src/test/javascript/protractor.conf.js",
     "e2e:protractor:headless": "npm run e2e:protractor --",
     "e2e:update-webdriver": "webdriver-manager update --gecko false",
-    "postinstall": "npm run e2e:update-webdriver",
     "java:docker": "./gradlew bootJar -Pprod jibDockerBuild",
     "java:docker:dev": "npm run java:docker -- -Pdev,webapp",
     "java:docker:prod": "npm run java:docker -- -Pprod",
