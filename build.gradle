@@ -314,7 +314,7 @@ if (project.hasProperty("nodeInstall")) {
 
     def fixedNpm = tasks.register("fixedNpm", Copy) {
         from npmSetup
-        into 'build/node'
+        into 'build/npm'
     }
     tasks.named("npmSetup").configure { finalizedBy fixedNpm }
 }

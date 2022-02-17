@@ -12,7 +12,7 @@ if [ -f "$basedir/mvnw" ]; then
   NODE_EXE="$basedir/$builddir/node"
 else
   bindir="$basedir/build/node/bin"
-  repodir="$basedir/build/node/lib/node_modules"
+  repodir="$basedir/build/npm/lib/node_modules"
   installCommand="$basedir/gradlew npmSetup"
 fi
 

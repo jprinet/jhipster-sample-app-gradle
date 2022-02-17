@@ -10,7 +10,7 @@ if exist "%NPMW_DIR%\mvnw.cmd" (
   set INSTALL_NPM_COMMAND=%NPMW_DIR%\mvnw.cmd -Pwebapp frontend:install-node-and-npm@install-node-and-npm
 ) else (
   set NODE_EXE=%NPMW_DIR%\build\node\bin\node.exe
-  set NPM_EXE=%NPMW_DIR%\build\node\lib\node_modules\npm\bin\npm-cli.js
+  set NPM_EXE=%NPMW_DIR%\build\npm\lib\node_modules\npm\bin\npm-cli.js
   set INSTALL_NPM_COMMAND=%NPMW_DIR%\gradlew.bat npmSetup
 )
 
