@@ -22,7 +22,7 @@ plugins {
     id 'com.gradle.enterprise'
     id 'com.gradle.common-custom-user-data-gradle-plugin'
 }
-    
+
 gradleEnterprise {
     server = "https://ge.solutions-team.gradle.com"
     buildScan {
@@ -33,11 +33,15 @@ gradleEnterprise {
 }
 
 buildCache {
-    local { enabled = true }
+    local { enabled = false }
     remote(HttpBuildCache) {
+        enabled = true // Disabled as this might not always desired
+        url = 'https://cache-node-solutions.grdev.net/cache/exp4/'
         push = true
-        enabled = false // Disabled as this might not always desired
-        url = 'https://ge.solutions-team.gradle.com/cache/' // note the trailing slash!
+        credentials {
+            username = System.getenv("GRADLE_ENTERPRISE_CACHE_USERNAME")
+            password = System.getenv("GRADLE_ENTERPRISE_CACHE_PASSWORD")
+        }
     }
 }
 rootProject.name = "jhipster-gradle-sample-application"
