@@ -67,15 +67,15 @@ idea {
     }
 }
 
-eclipse {
-    sourceSets {
-        main {
-            java {
-                srcDirs += ["build/generated/sources/annotationProcessor/java/main"]
-            }
-        }
-    }
-}
+//eclipse {
+//    sourceSets {
+//        main {
+//            java {
+//                srcDirs += ["build/generated/sources/annotationProcessor/java/main"]
+//            }
+//        }
+//    }
+//}
 
 defaultTasks "bootRun"
 
