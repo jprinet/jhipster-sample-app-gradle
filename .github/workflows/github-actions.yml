@@ -34,4 +34,4 @@ jobs:
             - name: Run Gradle build
               uses: gradle/gradle-build-action@v2
               with:
-                arguments: clean bootJar -Dscan.tag.exp4
+                arguments: clean compileJava -Dscan.tag.exp5

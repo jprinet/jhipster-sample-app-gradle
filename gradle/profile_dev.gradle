@@ -1,5 +1,5 @@
 dependencies {
-    developmentOnly "org.springframework.boot:spring-boot-devtools:${springBootVersion}"
+    //developmentOnly "org.springframework.boot:spring-boot-devtools:${springBootVersion}"
     implementation "com.h2database:h2"
 }
 
@@ -11,17 +11,17 @@ if (project.hasProperty("tls")) {
     profiles += ",tls"
 }
 
-springBoot {
-    buildInfo {
-        properties {
-            time = null
-        }
-    }
-}
-
-bootRun {
-    args = []
-}
+//springBoot {
+//    buildInfo {
+//        properties {
+//            time = null
+//        }
+//    }
+//}
+//
+//bootRun {
+//    args = []
+//}
 
 task webapp(type: NpmTask) {
     inputs.property('appVersion', project.version)
@@ -66,4 +66,4 @@ processResources {
 }
 
 processResources.dependsOn webapp
-bootJar.dependsOn processResources
+//bootJar.dependsOn processResources
